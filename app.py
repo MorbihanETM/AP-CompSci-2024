@@ -68,6 +68,9 @@ def roll_disadvantage()-> str:
         else:
             return 'you swing for ' + str(dice_1) + ' damage'
 
+def create_app():
+    app = Flask(__name__)
+    return app
 
 if __name__ == '__main__':
     app.run(host = 'localhost', port = 8081)
