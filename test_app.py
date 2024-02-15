@@ -8,7 +8,7 @@ from app import create_app
 @pytest.fixture
 def client():
     app = create_app()
-    app.register_blueprint(combat_bp, url_prefix='/endpoint')
+    # app.register_blueprint(combat_bp)
     # app.config['TESTING'] = True
 
     with app.app_context():
