@@ -7,8 +7,8 @@ combat_bp = Blueprint('combat', __name__)
 # Route the Blueprint of the combat roll to first endpoint
 @combat_bp.route('/endpoint', methods=['GET'])
 
-# An implementation that rolls a 20 sided dice and returns the corresponding value
 def roll_combat():
+    """ An implementation that rolls a 20 sided dice and returns the corresponding value"""
     x = random.randint(1, 20)
     if x == 1:
         return 'critical miss'
@@ -21,8 +21,8 @@ def roll_combat():
 # Route the Blueprint of the combat roll to second endpoint
 @combat_bp.route('/advantage', methods=['GET'])
 
-# An implementation that rolls two 20 sided dice and returns the corresponding values
 def roll_advantage(): 
+    """An implementation that rolls two 20 sided dice and returns the corresponding advantage values"""
     dice_1 = random.randint(1,20)
     dice_2 = random.randint(1,20)
 
@@ -51,8 +51,8 @@ def roll_advantage():
 # Route the Blueprint of the combat roll to third endpoint
 @combat_bp.route('/disadvantage', methods=['GET'])
 
-# An implementation that rolls two 20 sided dice and returns the corresponding values
 def roll_disadvantage():
+    """An implementation that rolls two 20 sided dice and returns the corresponding values"""
     dice_1 = random.randint(1,20)
     dice_2 = random.randint(1,20)
 
@@ -80,5 +80,6 @@ def roll_disadvantage():
 
 @combat_bp.route('/image')
 def serve_image():
+    """Ties the imported image to the endpoint blueprint"""
     "a simple HTTP image"
     return render_template('image.html')

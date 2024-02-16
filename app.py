@@ -15,6 +15,7 @@ IMG_DIR = './static'
 
 @app.route('/image')
 def serve_image():
+    """Ties the imported image to the endpoint"""
     "a simple HTTP image"
     return render_template('image.html')
 
